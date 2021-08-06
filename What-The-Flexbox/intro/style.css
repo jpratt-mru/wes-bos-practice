@@ -6,13 +6,15 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
+
+
 /* Some default styles to make each box visible */
 .box {
   color:white;
   font-size: 100px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-  padding:10px;
+
 }
 
 /* Colours for each box */
@@ -28,9 +30,27 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box10 { background:#16a085;}
 
 
+
 /* We start writing out flexbox here. The above is just page setup */
 .container {
   display: flex;
-  height: 100vh;
-  background: blue;
+  flex-wrap: wrap;
+  background-color: blue;
+
+  min-height: 100vh;
+
+  align-content: center;
+}
+
+.box {
+  font-size: 36px;
+  width: calc(100%/3);
+}
+
+.box10 {
+  align-self: flex-end;
+}
+
+.box4 {
+
 }
